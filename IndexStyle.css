@@ -1,0 +1,70 @@
+/*
+    Document   : IndexStyle.css
+    Created on : 2015-09-01 08:08 PM
+    Author     : AlexMalepenese
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+body{
+    background-color:lightsteelblue;
+    font-family;cursive;
+}
+    #classimg{
+        float:left;
+        Width: 20%;
+        margin-right:30px;
+    }
+#lego{
+    width:30%;
+    margin:30px;
+    position:absolute;
+    z-index:1;
+    top:200px;
+    right:60px;
+    padding:30px;
+}
+h1, h2{
+    color:blueviolet;
+}
+#mw{
+    font-weight:bolder;
+}
+a:hover{
+    color:blue;
+    background-color:red;
+}
+#html, #css, #home, #compu{
+                    background:white;
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                font-size: 20px;
+                padding: 5px;
+                width: 60px;
+                position:absolute;
+                z-index:1;
+}
+#html {
+    top:65px;
+    left:370px;
+            }
+#css {
+    top:65px;
+    left:450px;
+}
+#home{
+    top:65px;
+    left:530px;
+}
+#compu{
+    top:65px;
+    left:610px;
+    width:250px;
+}
+.pic{
+    width:50%;
+}
+.ra{
+    background-color:white;
+}
