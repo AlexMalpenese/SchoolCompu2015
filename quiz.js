@@ -17,16 +17,34 @@ var CA3 = document.getElementById("CA3");
 var A4 = document.getElementById("A4");
 var CA4 = document.getElementById("CA4");
 var PointDisplay = document.getElementById("PointDisplay");
+var Ends = document.getElementById("Ends");
+var TotalPoints = document.getElementById("TotalPoints");
+var NumQuestions = document.getElementById("NumQuestions");
+var Break = document.getElementById("Break");
+var restart = document.getElementById("restart");
 var ChosenCatagory = 0;
 var Points = 0;
 var questionNum = 1;
 
-
+function start(){
+    Ends.style.display = "none";
+    PointDisplay.style.display = "none";
+    Q1.style.display = "none";
+    topic.style.display = "none";
+    TotalPoints.style.display = "none";
+    Break.style.display = "none";
+    NumQuestions.style.display = "none";
+    startButton.style.display = "";
+    restart.style.display = "none";
+    questionNum = 1;
+    Points = 0;
+    ChosenCatagory = 0;
+}
 startButton.addEventListener("click", function() {
     startButton.style.display = "none";
     differentCategory.style.display = "";
     BlackButler.style.display = "";
-    DoctorWho.style.display = "none";
+    DoctorWho.style.display = "";
     Fullmetal.style.display = "none";
     Blue.style.display = "none";
     DGray.style.display = "none";
@@ -107,11 +125,23 @@ function questions() {
         A4.innerHTML = "4. Prince Soma";
         CA4.style.display = "";
     }
-    else if (ChosenCatagory == 2) {
+    else if (ChosenCatagory == 2 && questionNum == 1) {
         topic.style.display = "";
         topic.innerHTML = "Doctor Who";
         Q1.style.display = "";
-        Q1.innerHTML = "Who is the 10th Doctor's companion?";
+        Q1.innerHTML = "Who is the 12th Doctor's companion??";
+        A1.style.display = "";
+        A1.innerHTML = "1. Clara Oswald";
+        CA1.style.display = "";
+        A2.style.display = "";
+        A2.innerHTML = "2. Martha Jones";
+        CA2.style.display = "";
+        A3.style.display = "";
+        A3.innerHTML = "3. Rose Tyler";
+        CA3.style.display = "";
+        A4.style.display = "";
+        A4.innerHTML = "4. Captain Jack Harkness";
+        CA4.style.display = "";
     }
     else if (ChosenCatagory == 3) {
         topic.style.display = "";
@@ -135,70 +165,212 @@ function questions() {
 
 function Question2() {
     if (ChosenCatagory == 1 && questionNum == 2) {
-        topic.style.display = "";
-        topic.innerHTML = "Black Butler";
         Q1.innerHTML = "What animal does Sebastian like?";
         A1.innerHTML = "1. Dogs";
         A2.innerHTML = "2. Cats";
         A3.innerHTML = "3. Snakes";
         A4.innerHTML = "4. Turtles";
+    }else if (ChosenCatagory == 2 && questionNum == 2){
+        Q1.innerHTML = "If you are in a room with a Weeping Angle, when will it move?";
+        A1.innerHTML = "1. When you look at them";
+        A2.innerHTML = "2. When you cannot see them";
+        A3.innerHTML = "3. When you make noise";
+        A4.innerHTML = "4. When you move";
     }
 }
 
+function Question3(){
+    if(ChosenCatagory == 1 && questionNum == 3){
+        Q1.innerHTML = "Who is Ciel's fiance?";
+        A1.innerHTML = "1. Madam Red";
+        A2.innerHTML = "2. Mey-rin";
+        A3.innerHTML = "3. Grell Sutcliff";
+        A4.innerHTML = "4. Elizabeth";
+    }
+}
+function Question4(){
+    if(ChosenCatagory == 1 && questionNum == 4){
+        Q1.innerHTML = "How does Ciel get information from the Undertaker?";
+        A1.innerHTML = "1. Laughter";
+        A2.innerHTML = "2. Money";
+        A3.innerHTML = "3. Work";
+        A4.innerHTML = "4. Information";
+    }
+}    
+function Question5(){
+    if(ChosenCatagory == 1 && questionNum == 5){
+        Q1.innerHTML = "Why does Grell Sutcliff team up with Madam Red?";
+        A1.innerHTML = "1. They were both Reapers";
+        A2.innerHTML = "2. They killed for the same reasons";
+        A3.innerHTML = "3. They liked the same color";
+        A4.innerHTML = "4. THey were in love with each other";
+    }
+}
 CA1.addEventListener("click", function() {
-    if (questionNum == 1) {
+    if (questionNum == 1 && ChosenCatagory == 1) {
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
         Question2();
-    }
-    if (questionNum == 2) {
+    }else if (questionNum == 2 && ChosenCatagory == 1) {
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question3();
+    }else if (questionNum == 3 && ChosenCatagory == 1){
+        questionNum++;
+        Question4();
+    }else if (questionNum == 4 && ChosenCatagory == 1){
+        Points++;
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
+        Question5();
+    }else if (questionNum == 5 && ChosenCatagory == 1){
+        End();
+    }
+    
+    if (questionNum == 1 && ChosenCatagory == 2){
+        Points++;
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question2()
+    }else if (questionNum == 2 && ChosenCatagory == 2){
+        questionNum++;
+        Question3();
     }
 });
 
 CA2.addEventListener("click", function() {
-    if (questionNum == 1) {
+    console.log(questionNum);
+    if (questionNum == 1 && ChosenCatagory == 1) {
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
         Question2();
-    }
-    if (questionNum == 2) {
+    }else if (questionNum == 2 && ChosenCatagory == 1) {
         Points++;
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
+        Question3();
+    }else if (questionNum == 3 && ChosenCatagory == 1){
+        questionNum++;
+        Question4();
+    }else if (questionNum == 4 && ChosenCatagory == 1){
+        questionNum++;
+        Question5();
+    }else if (questionNum == 5 && ChosenCatagory == 1){
+        End();
+    }
+    
+    if(questionNum == 1 && ChosenCatagory == 2){
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question2();
+    }else if(questionNum == 2 && ChosenCatagory == 2){
+        Points++;
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question3();
     }
 });
 
 CA3.addEventListener("click", function() {
-    if (questionNum == 1) {
+    if (questionNum == 1 && ChosenCatagory == 1) {
         Points++;
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
         Question2();
-    }
-    if (questionNum == 2) {
+    }else if (questionNum == 2 && ChosenCatagory == 1) {
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
+        Question3();
+    }else if (questionNum == 3 && ChosenCatagory == 1){
+        questionNum++;
+        Question4();
+    }else if(questionNum == 4 && ChosenCatagory == 1){
+        questionNum++;
+        Question5();
+    }else if (questionNum == 5 && ChosenCatagory == 1){
+        Points++;
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        End();
     }
-});
-
-CA4.addEventListener("click", function() {
-    if (questionNum == 1) {
+    
+    if(questionNum == 1 && ChosenCatagory == 2){
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
         Question2();
+    }else if(questionNum == 2 && ChosenCatagory == 2){
+        Points++;
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question3();
     }
-    if (questionNum == 2) {
+});
+
+CA4.addEventListener("click", function() {
+    if (questionNum == 1 && ChosenCatagory == 1) {
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
+        Question2();
+    }else if (questionNum == 2 && ChosenCatagory == 1) {
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question3();
+    }else if (questionNum == 3 && ChosenCatagory == 1){
+        Points++;
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question4();
+    }else if (questionNum == 4 && ChosenCatagory == 1){
+        questionNum++;
+        Question5();
+    }else if (questionNum == 5 && ChosenCatagory == 1){
+        End();
+    }
+    
+    if(questionNum == 1 && ChosenCatagory == 2){
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question2();
+    }else if(questionNum == 2 && ChosenCatagory == 2){
+        questionNum++;
+        Question3();
     }
 });
+function End(){
+    A1.style.display = "none";
+    A2.style.display = "none";
+    A3.style.display = "none";
+    A4.style.display = "none";
+    CA1.style.display = "none";
+    CA2.style.display = "none";
+    CA3.style.display = "none";
+    CA4.style.display = "none";
+    Ends.style.display = "";
+    PointDisplay.style.display = "none";
+    Q1.style.display = "none";
+    topic.style.display = "none";
+    TotalPoints.style.display = "";
+    Break.style.display = "";
+    NumQuestions.style.display = "";
+    Ends.innerHTML = "Great Job! You got:";
+    TotalPoints.innerHTML = Points;
+    Break.innerHTML = "Out of:";
+    NumQuestions.innerHTML= questionNum;
+    restart.style.display = "";
+}
+restart.addEventListener("click", start);
+
+
