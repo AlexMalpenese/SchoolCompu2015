@@ -186,24 +186,43 @@ function Question3(){
         A2.innerHTML = "2. Mey-rin";
         A3.innerHTML = "3. Grell Sutcliff";
         A4.innerHTML = "4. Elizabeth";
+    }else if(ChosenCatagory == 2 && questionNum ==3){
+        Q1.innerHTML = "Who is Bad Wolf";
+        A1.innerHTML = "1. Captain Jack Harkness";
+        A2.innerHTML = "2. The Doctor";
+        A3.innerHTML = "3. The Face of Boa";
+        A4.innerHTML = "4. Rose Tyler";
     }
 }
 function Question4(){
     if(ChosenCatagory == 1 && questionNum == 4){
-        Q1.innerHTML = "How does Ciel get information from the Undertaker?";
+        Q1.innerHTML = "What does the Undertaker demand in return for information?";
         A1.innerHTML = "1. Laughter";
         A2.innerHTML = "2. Money";
         A3.innerHTML = "3. Work";
         A4.innerHTML = "4. Information";
+    }else if (ChosenCatagory == 2 && questionNum == 4){
+        Q1.innerHTML = "Who is the Face of Boa";
+        A1.innerHTML = "1. Captain Jack Harkness";
+        A2.innerHTML = "2. Micky";
+        A3.innerHTML = "3. Riversong";
+        A4.innerHTML = "4. Rose Tyler";
     }
 }    
 function Question5(){
     if(ChosenCatagory == 1 && questionNum == 5){
         Q1.innerHTML = "Why does Grell Sutcliff team up with Madam Red?";
-        A1.innerHTML = "1. They were both Reapers";
-        A2.innerHTML = "2. They killed for the same reasons";
-        A3.innerHTML = "3. They liked the same color";
-        A4.innerHTML = "4. THey were in love with each other";
+        A1.innerHTML = "1. They are both reapers";
+        A2.innerHTML = "2. They both kill for the same reason";
+        A3.innerHTML = "3. They like the same color";
+        A4.innerHTML = "4. They are in love with each other";
+    }
+    if(ChosenCatagory == 2 && questionNum == 5){
+        Q1.innerHTML = "Who made Captain Jack Harkness immortal?";
+        A1.innerHTML = "1. Riversong";
+        A2.innerHTML = "2. Madame Vastra";
+        A3.innerHTML = "3. Rose Tyler";
+        A4.innerHTML = "4. The Doctor";
     }
 }
 CA1.addEventListener("click", function() {
@@ -234,10 +253,21 @@ CA1.addEventListener("click", function() {
         PointDisplay.style.display = "";
         PointDisplay.innerHTML = Points;
         questionNum++;
-        Question2()
+        Question2();
     }else if (questionNum == 2 && ChosenCatagory == 2){
         questionNum++;
         Question3();
+    }else if(questionNum == 3 && ChosenCatagory == 2){
+        questionNum++;
+        Question4();
+    }else if(questionNum == 4 && ChosenCatagory == 2){
+        Points++;
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question5();
+    }else if (questionNum == 5 && ChosenCatagory == 2){
+        End();
     }
 });
 
@@ -274,6 +304,14 @@ CA2.addEventListener("click", function() {
         PointDisplay.innerHTML = Points;
         questionNum++;
         Question3();
+    }else if (questionNum == 3 && ChosenCatagory == 2){
+        questionNum++;
+        Question4();
+    }else if(questionNum == 4 && ChosenCatagory == 2){
+        questionNum++;
+        Question5();
+    }else if(questionNum == 5 && ChosenCatagory == 2){
+        End();
     }
 });
 
@@ -308,10 +346,19 @@ CA3.addEventListener("click", function() {
         questionNum++;
         Question2();
     }else if(questionNum == 2 && ChosenCatagory == 2){
-        Points++;
-        PointDisplay.innerHTML = Points;
         questionNum++;
         Question3();
+    }else if (questionNum == 3 && ChosenCatagory == 2){
+        questionNum++;
+        Question4();
+    }else if (questionNum == 4 && ChosenCatagory == 2){
+        questionNum++;
+        Question5();
+    }else if(questionNum == 5 && ChosenCatagory == 2){
+        Points++;
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        End();
     }
 });
 
@@ -347,6 +394,17 @@ CA4.addEventListener("click", function() {
     }else if(questionNum == 2 && ChosenCatagory == 2){
         questionNum++;
         Question3();
+    }else if(questionNum == 3 && ChosenCatagory == 2){
+        Points++;
+        PointDisplay.style.display = "";
+        PointDisplay.innerHTML = Points;
+        questionNum++;
+        Question4();
+    }else if(questionNum == 4 && ChosenCatagory == 2){
+        questionNum++;
+        Question5();
+    }else if(questionNum == 5 && ChosenCatagory == 2){
+        End();
     }
 });
 function End(){
