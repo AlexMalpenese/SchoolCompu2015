@@ -1,7 +1,7 @@
 var lego = document.getElementById("lego");
 var surprisedpuppy = document.getElementById("surprisedpuppy");
-var item3 = document.getElementById("item3");
-var item4 = document.getElementById("item4");
+var cutePuppy = document.getElementById("cutePuppy");
+var tiredPuppy = document.getElementById("tiredPuppy");
 
 var info1 = document.getElementById("info1");
 var info2 = document.getElementById("info2");
@@ -22,14 +22,14 @@ surprisedpuppy.addEventListener("click", function(){
     info4.innerHTML = "The puppy is very cute";
 });
 
-item3.addEventListener("click", function(){
+cutePuppy.addEventListener("click", function(){
     info1.innerHTML = "This is a picture of a puppy";
     info2.innerHTML = "The puppy is white and brown";
     info3.innerHTML = "The dog is most likely outside on the deck";
     info4.innerHTML = "THe puppy is very cute";
 });
 
-item4.addEventListener("click", function(){
+tiredPuppy.addEventListener("click", function(){
     info1.innerHTML = "This is a picture of a puppy";
     info2.innerHTML = "The puppy is on a hardwood floor inside";
     info3.innerHTML = "The puppy is tired";

@@ -1,0 +1,73 @@
+body{
+    background-color: darkred;
+}
+h3{
+    text-align:center;
+    Background-color:White;
+}
+h1{
+    font-size:40px;
+}
+#Q1{
+    text-align:center;
+    Background-color:White;
+    font-size:30px;
+}
+#topic{
+    text-align:center;
+    Background-color:White;
+    font-size:40px;
+}
+#startButton{
+    text-align:center;
+}
+#startButton button{
+    width:400px;
+    height:100px;
+    position:relative;
+    top:180px;
+}
+#yay{
+    text-align:center;
+}
+.button{
+    width:140px;
+    height:23px;
+}
+.Answers{
+    Background-color:pink;
+    font-size:30px;
+}
+#CA1{
+    float:right;
+    position:relative;
+    top:-30px;
+    right:10px;
+    width:200px;
+}
+#CA2{
+    float:right;
+    position:relative;
+    top:-30px;
+    right:10px;
+    width:200px;
+}
+#CA3{
+    float:right;
+    position:relative;
+    top:-30px;
+    right:10px;
+    width:200px;
+}
+#CA4{
+    float:right;
+    position:relative;
+    top:-30px;
+    right:10px;
+    width:200px;
+}
+#PointDisplay{
+    font-size:50px;
+    color:lightgreen;
+    position:relative
+}
