@@ -26,6 +26,7 @@ var ChosenCatagory = 0;
 var Points = 0;
 var questionNum = 1;
 
+//this function if for when you want to restart the game. showing only the start button and resetting the variables
 function start(){
     Ends.style.display = "none";
     PointDisplay.style.display = "none";
@@ -40,6 +41,7 @@ function start(){
     Points = 0;
     ChosenCatagory = 0;
 }
+//this function shows the catagories when the start button is clicked
 startButton.addEventListener("click", function() {
     startButton.style.display = "none";
     differentCategory.style.display = "";
@@ -49,7 +51,7 @@ startButton.addEventListener("click", function() {
     Blue.style.display = "none";
     DGray.style.display = "none";
 });
-
+//this sets a catagory number and then makes everything dissappear and directs the code to the function questions
 BlackButler.addEventListener("click", function() {
     BlackButler.style.display = "none";
     differentCategory.style.display = "none";
@@ -60,7 +62,7 @@ BlackButler.addEventListener("click", function() {
     ChosenCatagory = 1;
     questions();
 });
-
+//this sets a catagory number and then makes everything dissappear and directs the code to the function questions
 DoctorWho.addEventListener("click", function() {
     BlackButler.style.display = "none";
     differentCategory.style.display = "none";
@@ -105,7 +107,7 @@ DGray.addEventListener("click", function() {
     questions2();
 });
 
-
+//this displays the first question and changes the question depending on the catagory number.
 function questions() {
     if (ChosenCatagory == 1 && questionNum == 1) {
         topic.style.display = "";
@@ -162,7 +164,7 @@ function questions() {
         Q1.innerHTML = "Who did Allen Walker turn into an akuma?";
     }
 }
-
+// this displays the first question and changes the question depending on the catagory number.
 function Question2() {
     if (ChosenCatagory == 1 && questionNum == 2) {
         Q1.innerHTML = "What animal does Sebastian like?";
@@ -178,7 +180,7 @@ function Question2() {
         A4.innerHTML = "4. When you move";
     }
 }
-
+// this displays the first question and changes the question depending on the catagory number.
 function Question3(){
     if(ChosenCatagory == 1 && questionNum == 3){
         Q1.innerHTML = "Who is Ciel's fiance?";
@@ -190,10 +192,11 @@ function Question3(){
         Q1.innerHTML = "Who is Bad Wolf";
         A1.innerHTML = "1. Captain Jack Harkness";
         A2.innerHTML = "2. The Doctor";
-        A3.innerHTML = "3. The Face of Boa";
+        A3.innerHTML = "3. The Face of Boe";
         A4.innerHTML = "4. Rose Tyler";
     }
 }
+// this displays the first question and changes the question depending on the catagory number.
 function Question4(){
     if(ChosenCatagory == 1 && questionNum == 4){
         Q1.innerHTML = "What does the Undertaker demand in return for information?";
@@ -208,7 +211,8 @@ function Question4(){
         A3.innerHTML = "3. Riversong";
         A4.innerHTML = "4. Rose Tyler";
     }
-}    
+} 
+// this displays the first question and changes the question depending on the catagory number.
 function Question5(){
     if(ChosenCatagory == 1 && questionNum == 5){
         Q1.innerHTML = "Why does Grell Sutcliff team up with Madam Red?";
@@ -225,6 +229,7 @@ function Question5(){
         A4.innerHTML = "4. The Doctor";
     }
 }
+// the following event listeners check if the right button was clicked depending on the question number and adds points if it was the correct button, then it adds 1 to the question number then sends it to the next question.
 CA1.addEventListener("click", function() {
     if (questionNum == 1 && ChosenCatagory == 1) {
         PointDisplay.style.display = "";
@@ -407,6 +412,7 @@ CA4.addEventListener("click", function() {
         End();
     }
 });
+//this function erases everything then displays the score
 function End(){
     A1.style.display = "none";
     A2.style.display = "none";
@@ -429,6 +435,7 @@ function End(){
     NumQuestions.innerHTML= questionNum;
     restart.style.display = "";
 }
+//this displays the restart button and then sends it all the way back to the start if the button was clicked
 restart.addEventListener("click", start);
 
 

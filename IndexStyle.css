@@ -11,10 +11,10 @@ body{
     background-color:lightsteelblue;
     font-family;cursive;
 }
-    #classimg{
-        float:left;
-        Width: 20%;
-        margin-right:30px;
+#classimg{
+    float:left;
+    Width: 20%;
+    margin-right:30px;
     }
 #lego{
     width:30%;
@@ -35,7 +35,7 @@ a:hover{
     color:blue;
     background-color:red;
 }
-#html, #css, #home, #compu{
+#html, #css, #home, #compu, #puppy, #about{
                     background:white;
                 border: 2px solid black;
                 font-family: "Comic Sans MS", fantasy;
@@ -61,6 +61,16 @@ a:hover{
     top:65px;
     left:610px;
     width:250px;
+}
+#puppy{
+    top:65px;
+    left:190px;
+    width:160px;
+}
+#about{
+    top:65px;
+    left:70px;
+    width:100px;
 }
 .pic{
     width:50%;
